@@ -13,6 +13,7 @@
     <title>Images Search Engine</title>
   </head>
   <body>
+    <!-- search input and button -->
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -35,6 +36,8 @@
               aria-describedby="basic-addon1"
             />
           </div>
+
+          <!-- Colors -->
           <div class="input-group mb-3 mt-3">
             <div class="input-group-prepend">
               <label class="input-group-text border-secondary" for="colorSelect"
@@ -59,17 +62,70 @@
               <option value="brown">brown</option>
             </select>
           </div>
+
+          <!--  categories -->
+          <div class="input-group mb-3 mt-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text border-secondary" for="colorSelect"
+                >Category</label
+              >
+            </div>
+            <select class="form-control" id="categorySelect">
+              <option selected value="">Choose...</option>
+              <option value="places">places</option>
+              <option value="transportation">transportation</option>
+              <option value="animals">animals</option>
+              <option value="industries">Industries</option>
+              <option value="sports">sports</option>
+              <option value="travels">travels</option>
+              <option value="building">building</option>
+              <option value="computer">computer</option>
+              <option value="food">food</option>
+              <option value="business">business</option>
+              <option value="music">music</option>
+              <option value="nature">nature</option>
+              <option value="people">people</option>
+            </select>
+          </div>
+
+          <!-- Per page -->
+          <div class="input-group mb-3 mt-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text border-secondary" for="colorSelect"
+                >Results</label
+              >
+            </div>
+            <select class="form-control" id="perPage">
+              <option selected value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>
-    <div class="container-fluid" style="width: 100%; height: auto">
-      <div id="pictures" class="row mx-2">
-        <!-- Three cards -->
-      </div>
+
+    <!-- Pagination -->
+    <nav>
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled previous">
+          <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item col-sm-2 px-0">
+          <input id="pageNumInp" type="number" class="form-control" value="1" />
+        </li>
+        <li class="page-item next">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Cards -->
+    <div class="container-fluid" style="height: auto">
+      <div id="pictures" class="row mx-2"></div>
     </div>
 
     <!--! Large modal -->
-
     <div
       id="imageModal"
       class="modal fade bd-example-modal-lg"
